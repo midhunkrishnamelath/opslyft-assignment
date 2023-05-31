@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // Define an API endpoint
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
   res.json({ message: 'Hello from the exampleapp API!' });
 });
 
