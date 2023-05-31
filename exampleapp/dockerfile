@@ -1,0 +1,15 @@
+FROM node:14-alpine
+
+WORKDIR /app
+
+# Install dependencies
+RUN npm install express
+
+# Copy the rest of the app's source code to the container
+COPY . .
+
+# Expose the port on which the Node.js app will listen
+EXPOSE 3002
+
+# Start the Node.js app
+CMD [ "node", "app.js" ]
